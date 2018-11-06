@@ -7,13 +7,13 @@ namespace TesteTecnico.ApplicationCore.Entity
     {
         [Key]
         [ForeignKey("Person")]
-        public int PhysicalPersonId { get; protected set; }
-        public string FirstName { get; protected set; }
-        public string LastName { get; protected set; }
-        public string RG { get; protected set; }
-        public string CPF { get; protected set; }
+        public int PhysicalPersonId { get; private set; }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
+        public string RG { get; private set; }
+        public string CPF { get; private set; }
 
-        public virtual Person Person { get; protected set; }
+        public virtual Person Person { get; private set; }
 
         public PhysicalPerson() { }
     }

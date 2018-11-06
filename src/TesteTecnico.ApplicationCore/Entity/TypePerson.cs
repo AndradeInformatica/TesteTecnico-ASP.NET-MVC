@@ -2,8 +2,8 @@
 {
     public class TypePerson
     {
-        public int TypePersonId { get; protected set; }
-        public string Description { get; protected set; }
+        public int TypePersonId { get; private set; }
+        public string Description { get; private set; }
 
         public TypePerson() { }
     }
