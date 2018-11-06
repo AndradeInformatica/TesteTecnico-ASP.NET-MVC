@@ -1,0 +1,9 @@
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.ApplicationCore\bin\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.deps.json
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.ApplicationCore\bin\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.dll
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.ApplicationCore\bin\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.pdb
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.ApplicationCore\obj\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.csprojAssemblyReference.cache
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.ApplicationCore\obj\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.ApplicationCore\obj\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.ApplicationCore\obj\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.AssemblyInfo.cs
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.ApplicationCore\obj\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.dll
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.ApplicationCore\obj\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.pdb

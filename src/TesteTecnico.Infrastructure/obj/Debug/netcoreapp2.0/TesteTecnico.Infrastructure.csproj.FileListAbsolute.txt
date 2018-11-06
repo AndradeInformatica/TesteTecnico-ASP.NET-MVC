@@ -1,0 +1,12 @@
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\bin\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.deps.json
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\bin\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.dll
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\bin\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.pdb
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\bin\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.dll
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\bin\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.pdb
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\obj\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.csprojAssemblyReference.cache
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\obj\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\obj\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\obj\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.AssemblyInfo.cs
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\obj\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.csproj.CopyComplete
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\obj\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.dll
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.Infrastructure\obj\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.pdb

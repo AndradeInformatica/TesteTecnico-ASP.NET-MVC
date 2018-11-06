@@ -1,0 +1,17 @@
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\bin\Debug\netcoreapp2.0\TesteTecnico.UI.Web.deps.json
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\bin\Debug\netcoreapp2.0\TesteTecnico.UI.Web.runtimeconfig.json
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\bin\Debug\netcoreapp2.0\TesteTecnico.UI.Web.runtimeconfig.dev.json
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\bin\Debug\netcoreapp2.0\TesteTecnico.UI.Web.dll
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\bin\Debug\netcoreapp2.0\TesteTecnico.UI.Web.pdb
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\bin\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.dll
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\bin\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.dll
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\bin\Debug\netcoreapp2.0\TesteTecnico.ApplicationCore.pdb
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\bin\Debug\netcoreapp2.0\TesteTecnico.Infrastructure.pdb
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\obj\Debug\netcoreapp2.0\TesteTecnico.UI.Web.csprojAssemblyReference.cache
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\obj\Debug\netcoreapp2.0\TesteTecnico.UI.Web.csproj.CoreCompileInputs.cache
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\obj\Debug\netcoreapp2.0\TesteTecnico.UI.Web.AssemblyInfoInputs.cache
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\obj\Debug\netcoreapp2.0\TesteTecnico.UI.Web.AssemblyInfo.cs
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\obj\Debug\netcoreapp2.0\TesteTecnico.UI.Web.csproj.CopyComplete
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\obj\Debug\netcoreapp2.0\TesteTecnico.UI.Web.dll
+C:\Users\avaa1\Source\Repos\TesteTecnico\src\TesteTecnico.UI.Web\obj\Debug\netcoreapp2.0\TesteTecnico.UI.Web.pdb
