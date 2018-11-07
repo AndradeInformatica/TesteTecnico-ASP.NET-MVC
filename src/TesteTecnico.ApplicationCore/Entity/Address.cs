@@ -12,10 +12,10 @@ namespace TesteTecnico.ApplicationCore.Entity
         public string Neighborhood { get; private set; }
         public string City { get; private set; }
         public string ZipCode { get; private set; }
-        public string State { get; private set; }
+        public char State { get; private set; }
 
         public int PersonId { get; private set; }
-        public virtual Person Person { get; private set; }
+        public Person Person { get; private set; }
 
         public Address() { }
     }

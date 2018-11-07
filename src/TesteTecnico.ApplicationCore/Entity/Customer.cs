@@ -9,7 +9,7 @@ namespace TesteTecnico.ApplicationCore.Entity
         [ForeignKey("Person")]
         public int CustomerId { get; private set; }
 
-        public virtual Person Person { get; private set; }
+        public Person Person { get; private set; }
 
         public Customer() { }
     }

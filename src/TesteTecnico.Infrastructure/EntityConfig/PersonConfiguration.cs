@@ -1,60 +1,32 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Text;
+﻿using Microsoft.EntityFrameworkCore;
+using TesteTecnico.ApplicationCore.Entity;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-//namespace TesteTecnico.Infrastructure.EntityConfig
-//{
-//    public class PersonConfiguration : EntityTypeConfiguration<Person>
-//    {
-//        modelBuilder.Entity<Persons>()
-//                .HasMany(e => e.Addresses)
-//                .WithRequired(e => e.Persons)
-//                .WillCascadeOnDelete(false);
+namespace TesteTecnico.Infrastructure.EntityConfig
+{
+    public class PersonConfiguration : IEntityTypeConfiguration<Person>
+    {
+        public void Configure(EntityTypeBuilder<Person> builder)
+        {
+            builder.ToTable("People");
+            builder.HasKey(p => p.PersonId);
+            builder.HasMany(p => p.Address)
+                .WithOne(p => p.Person)
+                .HasForeignKey(p => p.PersonId)
+                .HasPrincipalKey(p => p.PersonId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-//        modelBuilder.Entity<Persons>()
-//                .HasOptional(e => e.Carriers)
-//                .WithRequired(e => e.Persons);
+            builder.HasOne(p => p.Customer)
+                .WithOne(p => p.Person)
+                .HasForeignKey<Customer>(p => p.CustomerId);
 
-//        modelBuilder.Entity<Persons>()
-//                .HasOptional(e => e.Customers)
-//                .WithRequired(e => e.Persons);
+            builder.HasOne(p => p.PhysicalPerson)
+                .WithOne(p => p.Person)
+                .HasForeignKey<PhysicalPerson>(p => p.PhysicalPersonId);
 
-//        modelBuilder.Entity<Persons>()
-//                .HasMany(e => e.Emails)
-//                .WithRequired(e => e.Persons)
-//                .WillCascadeOnDelete(false);
-
-//        modelBuilder.Entity<Persons>()
-//                .HasOptional(e => e.LegalPersons)
-//                .WithRequired(e => e.Persons);
-
-//        modelBuilder.Entity<Persons>()
-//                .HasMany(e => e.Orders)
-//                .WithRequired(e => e.Persons)
-//                .HasForeignKey(e => e.PersonEmitterId)
-//                .WillCascadeOnDelete(false);
-
-//        modelBuilder.Entity<Persons>()
-//                .HasMany(e => e.Orders1)
-//                .WithRequired(e => e.Persons1)
-//                .HasForeignKey(e => e.PersonReceiver)
-//                .WillCascadeOnDelete(false);
-
-//        modelBuilder.Entity<Persons>()
-//                .HasMany(e => e.Phones)
-//                .WithRequired(e => e.Persons)
-//                .WillCascadeOnDelete(false);
-
-//        modelBuilder.Entity<Persons>()
-//                .HasOptional(e => e.PhysicalPersons)
-//                .WithRequired(e => e.Persons);
-
-//        modelBuilder.Entity<Persons>()
-//                .HasOptional(e => e.Providers)
-//                .WithRequired(e => e.Persons);
-
-//        modelBuilder.Entity<Persons>()
-//                .HasOptional(e => e.Subsidiaries)
-//                .WithRequired(e => e.Persons);
-//    }
-//}
+            builder.HasOne(p => p.LegalPerson)
+                .WithOne(p => p.Person)
+                .HasForeignKey<LegalPerson>(p => p.LegalPersonId);
+        }
+    }
+}

@@ -13,7 +13,7 @@ namespace TesteTecnico.ApplicationCore.Entity
         public string RG { get; private set; }
         public string CPF { get; private set; }
 
-        public virtual Person Person { get; private set; }
+        public Person Person { get; private set; }
 
         public PhysicalPerson() { }
     }

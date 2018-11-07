@@ -25,21 +25,42 @@ namespace TesteTecnico.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("City");
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnName("City")
+                        .HasColumnType("varchar(40)");
 
-                    b.Property<string>("Complement");
+                    b.Property<string>("Complement")
+                        .HasColumnName("Complement")
+                        .HasColumnType("varchar(25)");
 
-                    b.Property<string>("Neighborhood");
+                    b.Property<string>("Neighborhood")
+                        .IsRequired()
+                        .HasColumnName("Neighborhood")
+                        .HasColumnType("varchar(30)");
 
-                    b.Property<string>("Number");
+                    b.Property<string>("Number")
+                        .IsRequired()
+                        .HasColumnName("Number")
+                        .HasColumnType("varchar(15)");
 
                     b.Property<int>("PersonId");
 
-                    b.Property<string>("State");
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 1)))
+                        .HasColumnName("State")
+                        .HasColumnType("char(2)");
 
-                    b.Property<string>("Street");
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnName("Street")
+                        .HasColumnType("varchar(50)");
 
-                    b.Property<string>("ZipCode");
+                    b.Property<string>("ZipCode")
+                        .IsRequired()
+                        .HasColumnName("ZipCode")
+                        .HasColumnType("varchar(9)");
 
                     b.HasKey("AddressId");
 
@@ -61,13 +82,21 @@ namespace TesteTecnico.Infrastructure.Migrations
                 {
                     b.Property<int>("LegalPersonId");
 
-                    b.Property<string>("CNPJ");
+                    b.Property<string>("CNPJ")
+                        .IsRequired()
+                        .HasColumnType("varchar(18)");
 
-                    b.Property<string>("FantasyName");
+                    b.Property<string>("FantasyName")
+                        .IsRequired()
+                        .HasColumnType("varchar(25)");
 
-                    b.Property<string>("SocialName");
+                    b.Property<string>("SocialName")
+                        .IsRequired()
+                        .HasColumnType("varchar(60)");
 
-                    b.Property<string>("StateRegistration");
+                    b.Property<string>("StateRegistration")
+                        .IsRequired()
+                        .HasColumnType("varchar(20)");
 
                     b.HasKey("LegalPersonId");
 
@@ -80,7 +109,7 @@ namespace TesteTecnico.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("TypePersonId");
+                    b.Property<byte?>("TypePersonId");
 
                     b.HasKey("PersonId");
 
@@ -93,26 +122,33 @@ namespace TesteTecnico.Infrastructure.Migrations
                 {
                     b.Property<int>("PhysicalPersonId");
 
-                    b.Property<string>("CPF");
+                    b.Property<string>("CPF")
+                        .IsRequired()
+                        .HasColumnType("varchar(14)");
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("varchar(25)");
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("varchar(25)");
 
-                    b.Property<string>("RG");
+                    b.Property<string>("RG")
+                        .IsRequired()
+                        .HasColumnType("varchar(12)");
 
                     b.HasKey("PhysicalPersonId");
 
-                    b.ToTable("PhisicalsPeople");
+                    b.ToTable("PhysicalsPeople");
                 });
 
             modelBuilder.Entity("TesteTecnico.ApplicationCore.Entity.TypePerson", b =>
                 {
-                    b.Property<int>("TypePersonId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<byte>("TypePersonId");
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .HasColumnType("varchar(10)");
 
                     b.HasKey("TypePersonId");
 
@@ -124,7 +160,7 @@ namespace TesteTecnico.Infrastructure.Migrations
                     b.HasOne("TesteTecnico.ApplicationCore.Entity.Person", "Person")
                         .WithMany("Address")
                         .HasForeignKey("PersonId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("TesteTecnico.ApplicationCore.Entity.Customer", b =>

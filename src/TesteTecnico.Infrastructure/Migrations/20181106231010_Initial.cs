@@ -11,9 +11,8 @@ namespace TesteTecnico.Infrastructure.Migrations
                 name: "TypesPeople",
                 columns: table => new
                 {
-                    TypePersonId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Description = table.Column<string>(nullable: true)
+                    TypePersonId = table.Column<byte>(nullable: false),
+                    Description = table.Column<string>(type: "varchar(10)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -26,7 +25,7 @@ namespace TesteTecnico.Infrastructure.Migrations
                 {
                     PersonId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    TypePersonId = table.Column<int>(nullable: true)
+                    TypePersonId = table.Column<byte>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -45,13 +44,13 @@ namespace TesteTecnico.Infrastructure.Migrations
                 {
                     AddressId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Street = table.Column<string>(nullable: true),
-                    Number = table.Column<string>(nullable: true),
-                    Complement = table.Column<string>(nullable: true),
-                    Neighborhood = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    ZipCode = table.Column<string>(nullable: true),
-                    State = table.Column<string>(nullable: true),
+                    Street = table.Column<string>(type: "varchar(50)", nullable: false),
+                    Number = table.Column<string>(type: "varchar(15)", nullable: false),
+                    Complement = table.Column<string>(type: "varchar(25)", nullable: true),
+                    Neighborhood = table.Column<string>(type: "varchar(30)", nullable: false),
+                    City = table.Column<string>(type: "varchar(40)", nullable: false),
+                    ZipCode = table.Column<string>(type: "varchar(9)", nullable: false),
+                    State = table.Column<string>(type: "char(2)", nullable: false),
                     PersonId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -62,7 +61,7 @@ namespace TesteTecnico.Infrastructure.Migrations
                         column: x => x.PersonId,
                         principalTable: "People",
                         principalColumn: "PersonId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -87,10 +86,10 @@ namespace TesteTecnico.Infrastructure.Migrations
                 columns: table => new
                 {
                     LegalPersonId = table.Column<int>(nullable: false),
-                    SocialName = table.Column<string>(nullable: true),
-                    FantasyName = table.Column<string>(nullable: true),
-                    CNPJ = table.Column<string>(nullable: true),
-                    StateRegistration = table.Column<string>(nullable: true)
+                    SocialName = table.Column<string>(type: "varchar(60)", nullable: false),
+                    FantasyName = table.Column<string>(type: "varchar(25)", nullable: false),
+                    CNPJ = table.Column<string>(type: "varchar(18)", nullable: false),
+                    StateRegistration = table.Column<string>(type: "varchar(20)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -104,20 +103,20 @@ namespace TesteTecnico.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PhisicalsPeople",
+                name: "PhysicalsPeople",
                 columns: table => new
                 {
                     PhysicalPersonId = table.Column<int>(nullable: false),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
-                    RG = table.Column<string>(nullable: true),
-                    CPF = table.Column<string>(nullable: true)
+                    FirstName = table.Column<string>(type: "varchar(25)", nullable: false),
+                    LastName = table.Column<string>(type: "varchar(25)", nullable: false),
+                    RG = table.Column<string>(type: "varchar(12)", nullable: false),
+                    CPF = table.Column<string>(type: "varchar(14)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PhisicalsPeople", x => x.PhysicalPersonId);
+                    table.PrimaryKey("PK_PhysicalsPeople", x => x.PhysicalPersonId);
                     table.ForeignKey(
-                        name: "FK_PhisicalsPeople_People_PhysicalPersonId",
+                        name: "FK_PhysicalsPeople_People_PhysicalPersonId",
                         column: x => x.PhysicalPersonId,
                         principalTable: "People",
                         principalColumn: "PersonId",
@@ -147,7 +146,7 @@ namespace TesteTecnico.Infrastructure.Migrations
                 name: "LegalPeople");
 
             migrationBuilder.DropTable(
-                name: "PhisicalsPeople");
+                name: "PhysicalsPeople");
 
             migrationBuilder.DropTable(
                 name: "People");

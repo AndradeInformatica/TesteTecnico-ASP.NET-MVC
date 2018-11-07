@@ -1,20 +1,17 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Text;
+﻿using Microsoft.EntityFrameworkCore;
+using TesteTecnico.ApplicationCore.Entity;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-//namespace TesteTecnico.Infrastructure.EntityConfig
-//{
-//    public class TypePersonConfiguration
-//    {
-//        modelBuilder.Entity<TypePersons>()
-//                .Property(e => e.Description)
-//                .IsFixedLength()
-//                .IsUnicode(false);
+namespace TesteTecnico.Infrastructure.EntityConfig
+{
+    public class TypePersonConfiguration : IEntityTypeConfiguration<TypePerson>
+    {
 
-//        modelBuilder.Entity<TypePersons>()
-//                .HasMany(e => e.Persons)
-//                .WithRequired(e => e.TypePersons)
-//                .HasForeignKey(e => e.TypePersonsId)
-//                .WillCascadeOnDelete(false);
-//    }
-//}
+        public void Configure(EntityTypeBuilder<TypePerson> builder)
+        {
+            builder.ToTable("TypesPeople");
+            builder.HasKey(tp => tp.TypePersonId);
+            builder.Property(tp => tp.Description).HasColumnType("varchar(10)");
+        }
+    }
+}

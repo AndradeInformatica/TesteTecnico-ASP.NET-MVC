@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TesteTecnico.ApplicationCore.Entity;
+using TesteTecnico.Infrastructure.EntityConfig;
 
 namespace TesteTecnico.Infrastructure.Data
 {
@@ -25,10 +26,12 @@ namespace TesteTecnico.Infrastructure.Data
             modelBuilder.Entity<TypePerson>().ToTable("TypesPeople");
             modelBuilder.Entity<Address>().ToTable("Addresses");
 
-            /*
-             * Setando as classes Configurations para que elas sejam a minha tabela no banco de dados
-             * Assim todas as configurações feitas nas classes configurations serão aplicadas ao banco
-             */
+            modelBuilder.ApplyConfiguration(new PersonConfiguration());
+            modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+            modelBuilder.ApplyConfiguration(new PhysicalPersonConfiguration());
+            modelBuilder.ApplyConfiguration(new LegalPersonConfiguration());
+            modelBuilder.ApplyConfiguration(new TypePersonConfiguration());
+            modelBuilder.ApplyConfiguration(new AddressConfiguration());
         }
     }
 }
